@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email~Blast</title>
+  <link rel="icon" href="https://i.ibb.co/YFSYVkTf/LOGO-SITM-4x-8.png" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+    }
+
+    .iframe-container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      border: none;
+      pointer-events: auto; /* agar bisa diklik */
+      touch-action: auto;
+    }
+
+    #loading {
+      text-align: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">Loading aplikasi...</div>
+  <div class="iframe-container" id="iframe-container" style="display:none;">
+    <iframe
+      id="app"
+      src="https://script.google.com/macros/s/AKfycbyMawjW4mwBdY6oR5xwgJtJukA2ol8mU-N20189FqAAeV7vEoNo44ryc9iERueAjZMp/exec"
+      scrolling="yes"
+      allow="clipboard-read; clipboard-write; geolocation; microphone; camera"
+      onload="document.getElementById('loading').style.display='none'; document.getElementById('iframe-container').style.display='block';">
+      Browser Anda tidak mendukung iframe. 
+      <a href="https://script.google.com/macros/s/AKfycbyMawjW4mwBdY6oR5xwgJtJukA2ol8mU-N20189FqAAeV7vEoNo44ryc9iERueAjZMp/exec" target="_blank">Buka di sini</a>
+    </iframe>
+  </div>
+
+  <script>
+    // Cek apakah user memakai perangkat mobile
+    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      window.location.href = "https://script.google.com/macros/s/AKfycbyMawjW4mwBdY6oR5xwgJtJukA2ol8mU-N20189FqAAeV7vEoNo44ryc9iERueAjZMp/exec";
+    }
+  </script>
+</body>
+</html>
